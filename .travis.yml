@@ -21,5 +21,5 @@ script:
   - gradle assembleZip
   - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin registry.heroku.com
   - sudo docker build docker/ -t registry.heroku.com/byomtest
-  - docker push registry.heroku.com/byomtest
+  - sudo docker push registry.heroku.com/byomtest
 
