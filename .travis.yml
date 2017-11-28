@@ -19,7 +19,7 @@ script:
   - gradle assemble
   - gradle check
   - gradle assembleZip
-  - sudo docker build docker/ -t helloworld
   - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin registry.heroku.com
-  - docker push helloworld
+  - sudo docker build docker/ -t registry.heroku.com/byomtest
+  - docker push registry.heroku.com/byomtest
 
