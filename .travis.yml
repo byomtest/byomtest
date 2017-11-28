@@ -20,3 +20,6 @@ script:
   - gradle check
   - gradle assembleZip
   - sudo docker build docker/ -t helloworld
+  - sudo docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD" registry.heroku.com
+  - ducker push helloworld
+
