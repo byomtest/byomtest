@@ -18,4 +18,5 @@ cache:
 script:
   - gradle assemble
   - gradle check
+  - gradle assembleZip
   - sudo docker build docker/ -t helloworld
