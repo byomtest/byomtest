@@ -2,6 +2,9 @@ group 'helloworld'
 version '1'
 
 apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName ='Application'
 
 sourceCompatibility = 1.8
 
@@ -12,4 +15,9 @@ repositories {
 dependencies {
     compile "com.sparkjava:spark-core:2.7.1"
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+task assembleZip(type: Copy) {
+    from distZip
+    into 'docker'
 }
